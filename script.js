@@ -1,20 +1,43 @@
-//let apiUrl = "https://dog.ceo/api/breeds/image/random"
-let apiUrl = "https://dog.ceo/api/breeds/list/all"
+// apiUrl = "https://opentdb.com/api.php?amount=10&category=18&type=boolean"
 
-function processResponse(response){
-        console.log("prossecing the response with a status of", response.status)
-    if(response.ok){
-        return response.json()
-    }
-    else{
-        throw new Error("http error:", response.status)
-    }
-}
+// function processResponse(response){
+//     console.log("prossesing the response with a staus of" ,response.status)
+//     if(response.ok){
+//         return response.json()
+//     }
+//     else{
+//         throw new Error("http error:", response.status)
+//     }
+// }
 
-function displayDogs(data){
-    console.log(data)
-}
+// function displayQuizData(data){
+//     console.log(data)
+// }
 
-fetch(apiUrl)
- .then(processResponse)
- .then(displayDogs)
+// function handleError(error){
+//     console.error("error fetching data", error)
+// }
+
+// fetch(apiUrl)
+//  .then(processResponse)
+//  .then(displayQuizData)
+//  .catch(handleError)
+
+const categoriesList = document.getElementById("categories-list")
+
+fetch("https://opentdb.com/api_category.php")
+ .then(response=>response.json())
+ .then(data=>{
+    const categories = data.trivia_categories
+    categories.forEach(category =>{
+        const li = document.createElement("li")
+        li.textContent = `${category.id}: ${category.name}`
+        categoriesList.appendChild(li)
+        
+    })
+ })
+ 
+
+ .catch (error=> {
+    console.error("error fetching categories:", error)
+ })
