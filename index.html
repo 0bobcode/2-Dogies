@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia quiz game!😈</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
 </head>
+
 <body>
     <div class="container">
+        <h1>Welcome to the quiz game</h1>
         <section id="start-screen">
             <label for="Difficulty">Select Difficulty:
                 <select name="" id="Difficulty">
-                    
+
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
                 </select>
-            
+
             </label>
 
             <label for="category" id="category">Category
                 <select id="categoryies">
-<option value="9">General Knowladge</option>
-<option value="17">Science & Nature</option>
-<option value="18">Since: Computers</option>
-<option value="30">Science: Gadgets</option>
-<option value="28">Vehicles</option>
+                    <option value="9">General Knowladge</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="18">Since: Computers</option>
+                    <option value="30">Science: Gadgets</option>
+                    <option value="28">Vehicles</option>
                 </select>
-                
+
             </label>
+            <button id="start-button">
+                Start Quiz📱
+            </button>
+        </section>
+        <section id="quiz-screen" class="hidden">
+            <div class="quiz-header">
+                <h2 id="level-title">Level 1</h2>
+                <div id="status">
+                    <p id="question-number">Question 1 / 10</p>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+            </div>
+            <div id="question-container">
+                <p id="Question-text"></p>
+                <ul id="answers-list"></ul>
+                
+            </div>
+            <button id="next-question" disabled>Next</button>
+        </section>
+        <section class="hidden" id="summary-screen">
+            <h2 id="level-summary">level summary : </h2>
+            <p id="summary-text"></p>
+            <div class="buttons">
+                <button id="try-again">Try again</button>
+                <button class="hidden" id="next-level-btn">Next level</button>
+            </div>
         </section>
         <ul id="categorie-list"></ul>
     </div>
-    <script src="script.js"></script>
+    
+    <script src="triviaquiz.js"></script>
 </body>
+
 </html>

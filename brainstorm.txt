@@ -8,7 +8,7 @@ quiz game level 1 -> has 10 questions o the bassis of user selected difficulty a
 
 quiz game level 2 -> has 20 questions on the bassis of user selected difficulty and category and will have multi choice questions😨 each question will have 10 points😊 the user has to score a minimum of 160 points to quailify for the next level display retry if the fail and display retry and next level button if they beat the level
 
-quiz game level 3😱😨😨 -> has 30 questions on the bassis of user selected difficulty and category and will have true/ false, multi choice questions😨😨😨 each question will have 10 points😊 the user has to score a minimum of 280 points to quailify and win the game 😊🏆 display retry if the fail and display you win if they beat the quiz
+quiz game level 3😱😨😨 -> has 30 questions on the bassis of user selected difficulty and category and will have true/ false, multi choice questions😨😨😨 each question will have 10 points😊 the user has to score a minimum of 270 points to quailify and win the game 😊🏆 display retry if the fail and display you win if they beat the quiz
 
 
 
