@@ -16,7 +16,7 @@
         <h1>Welcome to the quiz game</h1>
         <section id="start-screen">
             <label for="Difficulty">Select Difficulty:
-                <select name="" id="Difficulty">
+                <select name="" id="difficulty">
 
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
@@ -26,7 +26,7 @@
             </label>
 
             <label for="category" id="category">Category
-                <select id="categoryies">
+                <select id="categories">
                     <option value="9">General Knowladge</option>
                     <option value="17">Science & Nature</option>
                     <option value="18">Since: Computers</option>
@@ -48,15 +48,16 @@
                 </div>
             </div>
             <div id="question-container">
-                <p id="Question-text"></p>
+                <p id="question-text"></p>
                 <ul id="answers-list"></ul>
                 
             </div>
             <button id="next-question" disabled>Next</button>
         </section>
         <section class="hidden" id="summary-screen">
-            <h2 id="level-summary">level summary : </h2>
+            <h2 id="level-summary">level summary : 
             <p id="summary-text"></p>
+            </h2>
             <div class="buttons">
                 <button id="try-again">Try again</button>
                 <button class="hidden" id="next-level-btn">Next level</button>
