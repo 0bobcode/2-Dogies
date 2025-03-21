@@ -1,3 +1,75 @@
 *{
     font-family: "REM", sans-serif;
 }
+
+body{
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container{
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 27px;
+
+}
+
+#start-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid;
+    height: 15rem;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    
+}
+
+#options-container{
+    margin-bottom:24px;
+}
+
+#start-button{
+    border: none;
+    background-color: aqua;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 800;
+    color: #292929;
+}
+
+.hidden{
+    display: none;
+}
+
+#quiz-screen{
+text-align: center;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 12rem;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#summary-screen{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 9rem;
+    border: 1px solid;
+    border-radius: 5px;
+    
+}

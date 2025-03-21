@@ -40,3 +40,16 @@ retryBtn.addEventListener("click", ()=>{
     //restart the same level from the beggining
     startLevel(currentLevel)
 })
+
+
+//start quiz by inittiliazing level 1
+function startQuiz(){
+    currentLevel = 1
+    score = 0
+    updateScore(0)
+    startScreen.classList.add("hidden")
+    quizScreen.classList.remove("hidden")
+    summaryScreen.classList.add("hidden")
+    startLevel(currentLevel)
+
+}
