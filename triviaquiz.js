@@ -1,9 +1,9 @@
 // Available difficulties and level configurations
 const difficulties = ["easy", "medium", "hard"];
 const levels = {
-  1: { questions: 5, minScore: 30, type: 'boolean' },
-  2: { questions: 10, minScore: 60, type: 'multiple' },
-  3: { questions: 15, minScore: 90, type: '' } // Mixed question types for level 3
+  1: { questions: 10, minScore: 60, type: 'boolean' },
+  2: { questions: 15, minScore: 110, type: 'multiple' },
+  3: { questions: 20, minScore: 160, type: '' } // Mixed question types for level 3
 };
 
 let currentLevel = 1;
@@ -63,7 +63,7 @@ async function populateCategories() {
       data.trivia_categories.forEach(cat => {
         const option = document.createElement('option');
         option.value = cat.id;
-        option.textContent = cat.name;
+        option.textContent = cat.name.trim();
         categorySelect.appendChild(option);
       });
     }

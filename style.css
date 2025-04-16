@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
   }
   
   body {
@@ -23,6 +24,10 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
   
+  #start-screen{
+    text-align: center;
+  }
+
   /* Section visibility */
   .hidden {
     display: none;
@@ -54,7 +59,7 @@
   .quiz-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: baseline; */
     /*flex-direction: row;*/
     margin-bottom: 1rem;
     
@@ -73,11 +78,13 @@
 
   #user-selection-display{
     text-align: right; 
+    font-size: 0.8rem;
+    font-weight: 600;
   }
   
   /* Settings */
   .settings {
-    margin-bottom: 1rem;
+    margin: 1rem 0rem;
   }
   
   .settings label {
@@ -89,6 +96,16 @@
   #question-text {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+  }
+
+
+
+  #start-btn:after{
+    content:" 🎮";
+  }
+
+  #triva::after{
+    content:"🚦";
   }
   
   #answers-list {
@@ -129,3 +146,4 @@
     margin-top: 1rem;
   }
   
+
