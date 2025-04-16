@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia quiz game!😈</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <div class="container">
-        <h1>Welcome to the quiz game</h1>
-        <section id="start-screen" class="hidden">
-            <div id="options-container">
-            <label for="Difficulty">Select Difficulty:
-                <select name="" id="difficulty">
-                    
-                </select>
+  <div class="container">
+    <!-- Start Screen -->
+    <section id="start-screen">
+      <h1>Trivia Quiz Game</h1>
+      <div class="settings">
+        <label>
+          Difficulty:
+          <select id="difficulty">
+            <!-- Options added dynamically -->
+          </select>
+        </label>
+        <label>
+          Category:
+          <select id="category">
+            <!-- Options added dynamically -->
+          </select>
+        </label>
+      </div>
+      <button id="start-btn">Start Quiz</button>
+    </section>
 
-            </label>
-            
+    <!-- Quiz Screen -->
+    <section id="quiz-screen" class="hidden">
+      <div class="quiz-header">
+        <h2 id="level-title">Level 1</h2>
+        <div id="user-selection-display">
+        <p id="category-text"></p>
+        <p id="difficulty-text"></p>
+        </div>
+        
+      </div>
+      <hr>
+      <div class="status">
+        <p id="question-number">Question 1 / 10</p>
+      
+        <p>Score: <span id="score">0</span></p>
+      </div>
+      <div id="question-container">
+        <p id="question-text"></p>
+        <ul id="answers-list"></ul>
+      </div>
+      <button id="next-btn" disabled>Next</button>
+    </section>
 
-            <label for="category" id="category">Category
-                <select id="categories">
-                    <option value="9">General Knowladge</option>
-                    <option value="17">Science & Nature</option>
-                    <option value="18">Since: Computers</option>
-                    <option value="30">Science: Gadgets</option>
-                    <option value="28">Vehicles</option>
-                </select>
-
-            </label>
-            </div>
-            
-            <div>
-            <button id="start-button">
-                Start Quiz📱
-            </button>
-            </div>
-        </section>
-        <section id="quiz-screen" class="hidden">
-            <div class="quiz-header">
-                <h2 id="level-title">Level 1</h2>
-                <div id="status">
-                    <p id="question-number">Question 1 / 10</p>
-                    <p>Score: <span id="score">0</span></p>
-                </div>
-            </div>
-            <div id="question-container">
-                <p id="question-text"></p>
-                <ul id="answers-list"></ul>
-                
-            </div>
-            <button id="next-question" disabled>Next</button>
-        </section>
-        <section class="hidden" id="summary-screen">
-            <h2 id="level-summary">level summary : 
-            <p id="summary-text"></p>
-            </h2>
-            <div class="buttons">
-                <button id="try-again">Try again</button>
-                <button class="hidden" id="next-level-btn">Next level</button>
-            </div>
-        </section>
-        <ul id="categorie-list"></ul>
-    </div>
-    
-    <script src="triviaquiz.js"></script>
+    <!-- Summary Screen -->
+    <section id="summary-screen" class="hidden">
+      <h2>Level Summary</h2>
+      <p id="summary-text"></p>
+      <div class="buttons">
+        <button id="retry-btn">Retry Level</button>
+        <button id="next-level-btn" class="hidden">Next Level</button>
+      </div>
+    </section>
+  </div>
+  <script src="triviaquiz.js"></script>
 </body>
-
 </html>
